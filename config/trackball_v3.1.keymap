@@ -23,7 +23,7 @@
         compatible = "zmk,combos";
 
         base_combo {
-            bindings = <&hold_mo_tap_mkp 1 MB3>;
+            bindings = <&hold_mo_tap_mkp 2 MB3>;
             key-positions = <0 1>;
         };
     };
@@ -60,7 +60,7 @@
 
         base {
             bindings = <
-&mkp MB1  &hold_mo_tap_mkp 2 MB2
+&mkp MB1  &hold_mo_tap_mkp 1 MB2
 &adj1     &adj2
             >;
 
@@ -96,17 +96,17 @@
         layers = <1>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            <&zip_xy_scaler 1 32>,
+            <&zip_xy_scaler 1 64>,
             <&zip_xy_to_scroll_mapper &zip_scroll_snap>;
     };
 
     sniper {
         layers = <2>;
-        input-processors = <&zip_xy_scaler 1 4>;
+        input-processors = <&zip_xy_scaler 1 8>;
     };
 
     adjust {
         layers = <3>;
-        input-processors = <&zip_xy_scaler 1 8>;
+        input-processors = <&zip_xy_scaler 1 12>;
     };
 };
